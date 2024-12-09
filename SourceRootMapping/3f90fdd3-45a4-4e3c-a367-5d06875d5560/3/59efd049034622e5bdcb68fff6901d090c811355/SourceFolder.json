@@ -1,0 +1,26 @@
+﻿{
+  "build_artifactstagingdirectory": "1\\a",
+  "agent_builddirectory": "1",
+  "collectionUrl": "https://dev.azure.com/hibaallahessarghi/",
+  "definitionName": "hibaallahinfo.TodoList",
+  "repositoryTrackingInfo": [
+    {
+      "identifier": "self",
+      "repositoryType": "GitHub",
+      "repositoryUrl": "https://github.com/hibaallahinfo/TodoList",
+      "sourcesDirectory": "1\\s\\TodoList"
+    }
+  ],
+  "fileFormatVersion": 3,
+  "lastRunOn": "12/08/2024 00:01:22 +01:00",
+  "repositoryType": "GitHub",
+  "lastMaintenanceAttemptedOn": "",
+  "lastMaintenanceCompletedOn": "",
+  "build_sourcesdirectory": "1\\s",
+  "common_testresultsdirectory": "1\\TestResults",
+  "collectionId": "3f90fdd3-45a4-4e3c-a367-5d06875d5560",
+  "definitionId": "3",
+  "hashKey": "59efd049034622e5bdcb68fff6901d090c811355",
+  "repositoryUrl": "https://github.com/hibaallahinfo/TodoList",
+  "system": "build"
+}
