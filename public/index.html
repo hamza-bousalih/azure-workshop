@@ -3,19 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Devops Task Manager</title>
+    <title>DevOps Task Manager</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
-
-
 <body>
     <div class="container">
-        <h1>Devops Task Manager</h1>
+        <h1>DevOps Task Manager</h1>
         <div class="task-input-container">
             <input type="text" id="new-task" placeholder="Add a new task...">
             <button id="add-task">Add Task</button>
+        </div>
+        <div class="filter-container">
+            <select id="task-filter">
+                <option value="all">All Tasks</option>
+                <option value="active">Active Tasks</option>
+                <option value="completed">Completed Tasks</option>
+            </select>
+            <button id="clear-completed">Clear Completed</button>
         </div>
         <ul id="task-list"></ul>
     </div>
