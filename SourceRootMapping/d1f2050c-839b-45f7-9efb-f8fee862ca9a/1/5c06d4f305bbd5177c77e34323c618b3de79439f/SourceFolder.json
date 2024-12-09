@@ -1,0 +1,26 @@
+﻿{
+  "build_artifactstagingdirectory": "2\\a",
+  "agent_builddirectory": "2",
+  "collectionUrl": "https://dev.azure.com/panorama123/",
+  "definitionName": "hamza-bousalih.azure-workshop",
+  "repositoryTrackingInfo": [
+    {
+      "identifier": "self",
+      "repositoryType": "GitHub",
+      "repositoryUrl": "https://github.com/hamza-bousalih/azure-workshop",
+      "sourcesDirectory": "2\\s\\azure-workshop"
+    }
+  ],
+  "fileFormatVersion": 3,
+  "lastRunOn": "12/09/2024 18:08:10 +01:00",
+  "repositoryType": "GitHub",
+  "lastMaintenanceAttemptedOn": "",
+  "lastMaintenanceCompletedOn": "",
+  "build_sourcesdirectory": "2\\s",
+  "common_testresultsdirectory": "2\\TestResults",
+  "collectionId": "d1f2050c-839b-45f7-9efb-f8fee862ca9a",
+  "definitionId": "1",
+  "hashKey": "5c06d4f305bbd5177c77e34323c618b3de79439f",
+  "repositoryUrl": "https://github.com/hamza-bousalih/azure-workshop",
+  "system": "build"
+}
