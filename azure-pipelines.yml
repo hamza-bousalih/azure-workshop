@@ -14,8 +14,8 @@ steps:
 # Étape 2 : Construire et pousser l'image Docker vers Docker Hub
 - task: Docker@2
   inputs:
-    containerRegistry: 'az-dockerhub-connection'  # Connexion Docker Hub configurée dans Azure DevOps.
-    repository: 'hibaallah2024/docker-image'      # Répertoire de l'image Docker (<utilisateur>/<nom-repo>).
+    containerRegistry: 'azure-workshop-dh'  # Connexion Docker Hub configurée dans Azure DevOps.
+    repository: 'bousalih123/azure-workshop'      # Répertoire de l'image Docker (<utilisateur>/<nom-repo>).
     command: 'buildAndPush'                       # Construire et pousser l'image Docker.
     Dockerfile: 'Dockerfile'                      # Chemin relatif vers le Dockerfile.
     tags: 'latest'                                # Utiliser le tag "latest" pour l'image.
