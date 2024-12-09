@@ -7,25 +7,25 @@ pool:
   name: Default  # Remplacez par le nom de votre pool si vous utilisez un agent auto-hébergé.
 
 steps:
-# Étape 1 : Récupérer le code source
-- checkout: self
-  fetchDepth: 1
+  # Étape 1 : Récupérer le code source
+  - checkout: self
+    fetchDepth: 1
 
-# Étape 2 : Construire et pousser l'image Docker vers Docker Hub
-- task: Docker@2
-  inputs:
-    containerRegistry: 'azure-workshop-dh'  # Connexion Docker Hub configurée dans Azure DevOps.
-    repository: 'bousalih123/azure-workshop'      # Répertoire de l'image Docker (<utilisateur>/<nom-repo>).
-    command: 'buildAndPush'                       # Construire et pousser l'image Docker.
-    Dockerfile: 'Dockerfile'                      # Chemin relatif vers le Dockerfile.
-    tags: 'latest'                                # Utiliser le tag "latest" pour l'image.
+  # Étape 2 : Construire et pousser l'image Docker vers Docker Hub
+  - task: Docker@2
+    inputs:
+      containerRegistry: 'azure-workshop-dh'  # Connexion Docker Hub configurée dans Azure DevOps.
+      repository: 'bousalih123/azure-workshop'      # Répertoire de l'image Docker (<utilisateur>/<nom-repo>).
+      command: 'buildAndPush'                       # Construire et pousser l'image Docker.
+      Dockerfile: 'Dockerfile'                      # Chemin relatif vers le Dockerfile.
+      tags: 'latest'                                # Utiliser le tag "latest" pour l'image.
 
-# Étape 3 : Déclencher le déploiement Render via un Deploy Hook
-- task: PowerShell@2
-  inputs:
-    targetType: 'inline'
-    script: |
-      # Appeler l'URL du Deploy Hook pour déclencher le déploiement Render
-      $url = "https://api.render.com/deploy/srv-ctbhqubv2p9s73fskh7g?key=VRHIAKZYlLw"
-      Invoke-RestMethod -Uri $url -Method Post
-  displayName: 'Trigger Deploy via Render Hook'
+  # Étape 3 : Déclencher le déploiement Render via un Deploy Hook
+  - task: PowerShell@2
+    inputs:
+      targetType: 'inline'
+      script: |
+        # Appeler l'URL du Deploy Hook pour déclencher le déploiement Render
+        $url = "https://api.render.com/deploy/srv-ctbhqubv2p9s73fskh7g?key=VRHIAKZYlLw"
+        Invoke-RestMethod -Uri $url -Method Post
+    displayName: 'Trigger Deploy via Render Hook'
